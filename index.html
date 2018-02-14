@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testing alert</title>
+</head>
+<body>
+    <p>befor script running</p>
+    <div id="progress"></div>
+    <div id="progress2"></div>
+    <ul>
+        <li>information</li>
+        <li>stuff</li>
+    </ul>
+
+    <a href="http://edu.sharif.edu/zip">...zip edu link !!</a>
+
+    <br>
+
+    <a href="https://google.com">google.com!!</a>
+
+    <table id="table" class="tablee">
+        <tr class="trr">
+            <td>Your age:</td>
+
+            <td>
+                <label class = "lbl">
+                    <input type="radio" name="age" value="young" checked>Less than 18
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="age" value="mature"> from 18 to 50
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="age" value="senior"> more than 60
+                </label>
+            </td>
+        </tr>
+    </table>
+    <!--<iframe src="index.html" id="frame"></iframe>-->
+    <script>
+        // alert(window.innerWidth)
+        // alert(window.innerHeight)
+        //
+        // function sayHi(phrase, who){
+        //     alert(phrase + " , " + who);
+        // }
+        // let timerid = setTimeout(sayHi, 1000, "Hello", "John");
+        // alert(timerid)
+        //
+        // let interid = setInterval(sayHi, 3000, "Hello", "Marry")
+        //
+        // clearTimeout(timerid)
+        // alert(timerid)
+        //
+        // clearInterval(interid)
+        // var i = 0;
+        // var timeid = setTimeout( function addProgress() {
+        //     progress.innerHTML = String(i);
+        //     i++;
+        //     timeid = setTimeout(addProgress, 1);
+        // }, 100)
+
+        // let i = 0;
+        // function count() {
+        //     console.log("here")
+        //     do {
+        //         i++;
+        //         progress.innerHTML = i;
+        //     } while ( i % 1e3 != 0 );
+        //
+        //     if ( i < 1e4 ){
+        //         setTimeout(count(), 0)
+        //     }
+        // }
+        // count();
+        //
+        // let worker = {
+        //     someMethod() {
+        //         return 1;
+        //     },
+        //     slow(x) {
+        //         alert("in slow : " + this)
+        //         alert("Called with " + x);
+        //         return x * this.someMethod();
+        //     }
+        // }
+        //
+        //
+        // function cachingDecorator(func) {
+        //     let cache = new Map();
+        //     return function (x) {
+        //         if (cache.has(x)) {
+        //             return cache.get(x)
+        //         }
+        //         else {
+        //             let result = func(x);
+        //             cache.set(x, result);
+        //             return result;
+        //         }
+        //     };
+        // }
+        //
+        // let userr = {
+        //     name: "John",
+        //     "toString": function () {
+        //         return String(this.name)
+        //     }
+        // }
+        // Object.defineProperty(userr, "toString", {
+        //     enumerable: false
+        // })
+        //
+        // for(let i in userr){
+        //     alert(i)
+        // }
+        // alert(userr)
+
+        //
+        // let tmp = worker.slow;
+        //
+        // alert(tmp(10))
+        //
+        // alert(worker.slow(1));
+        // worker.slow = cachingDecorator(worker.slow);
+        // alert(worker.slow(2));
+        // function summ(a, b) {
+        //     return a + b;
+        // }
+        // function curry(func) {
+        //     return function (a) {
+        //         return function(b){
+        //             return func(a,b);
+        //         }
+        //     }
+        // }
+        // var sum = curry(summ);
+        // alert(sum(2))
+        //
+        // let user = {
+        //     name: "John",
+        //     id: 123
+        // };
+        //
+        // progress.innerHTML = JSON.stringify(Object.getOwnPropertyDescriptors(user), null, 1)
+        // progress2.innerHTML = JSON.stringify(Object.getOwnPropertyDescriptors(user), null, 20)
+        //
+        // Object.defineProperty(user, "func", {
+        //     value: function (x) {
+        //         return this.name;
+        //     }
+        // })
+        //
+        // progress2.innerHTML = user.func(10);
+        // alert(JSON.stringify(user))
+        //
+        // iframe.onload = function () {
+        //     alert(iframe.contentWindow.innerWidth)
+        //     alert(iframe.contentWindow.Array)
+        // }
+        // 'use strict';
+        // let message="hello";
+        // alert(message)
+        // let phrase = `yohahaha ${2 + 4}`
+        // alert(phrase)
+        // var choice = confirm("enter a choice")
+        // console.log(choice)
+        //
+        // alert(window.choice)
+        // let tmp = "1";
+        // function tst() {
+        //     tmp = "2";
+        //     alert(tmp)
+        // }
+        // tst()
+
+        let animal ={
+            walk() {
+                if (!this.isSleeping) {
+                    alert("i'm Walking");
+                }else {
+                    alert('animal was slap');
+                }
+            },
+            sleep() {
+                this.isSleeping = true;
+            }
+        };
+
+        let rabbit = {
+            __proto__: animal,
+            name: "white Rabbit"
+        };
+
+        rabbit.sleep();
+        // alert(rabbit.isSleeping);
+        // alert(animal.isSleeping);
+
+    </script>
+    <p>after script</p>
+</body>
+</html>
