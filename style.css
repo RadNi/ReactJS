@@ -16,6 +16,10 @@ html, body {
     background-repeat:   no-repeat;
     background-position: center center;
 }
+.head-div > .text-div {
+    display: table-cell;
+    vertical-align: middle;
+}
 
 .head-div {
     margin: 0;
@@ -28,6 +32,8 @@ html, body {
     border-radius:10px;
     border-style: solid;
     color: rgba(0,0,0,0);
+    display: table;
+    text-align: center;
 }
 
 .credential {

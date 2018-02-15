@@ -29,7 +29,7 @@ function mouseover() {
         },
         draw: function (progress) {
             head[0].style.height = progress*100+"%" ;
-            head[0].style.color = `rgba(0,0,0,${progress})`;
+            head[0].style.color = `rgba(0,0,0,${(progress - 0.1) * 5})`;
             credential.style.height =100 - progress * 100 + "%"
         }
     });
@@ -67,7 +67,7 @@ function mouseout() {
         },
         draw: function (progress) {
             head[0].style.height = 30 - progress * 100 + '%';
-            head[0].style.color = `rgba(0,0,0,${1 - progress})`;
+            head[0].style.color = `rgba(0,0,0,${1 - 5*progress})`;
             credential.style.height = 70 + progress * 100 + "%"
         }
     });
