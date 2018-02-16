@@ -79,7 +79,7 @@ html, body {
 
 }
 
-.tst{
+.dialogue{
     background-image: -webkit-gradient(linear, left top, 45deg, color-stop(0%, #E605C1), color-stop(99%, #3B113B));
     background-image: -moz-linear-gradient(45deg,#E605C1 0%,#3B113B 99%);
     background-image: -webkit-linear-gradient(45deg,#E605C1 0%,#3B113B 99%);
@@ -95,4 +95,14 @@ html, body {
     online text gradient maker :
     http://www.textgradient.com
     */
+}
+
+.tst{
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }

@@ -4,24 +4,13 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>-->
-    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
-    <style>p {
-        width: 300px;
-        position: relative;
-    }
-
-    p::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
-        mix-blend-mode: screen;
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>.my-auto{
+        margin-top: auto;
+        margin-bottom: auto;
     }</style>
 </head>
 <body>
@@ -43,12 +32,11 @@
     <!--</div>-->
 <!--</div>-->
 
-
-<p>
-    this is a test paragraph hahahah
-    hfasfhjasdfhas
-    dsafdashjlfah
-</p>
+<div class="row h-100">
+    <div class="col-sm-12 my-auto">
+        <div class="card card-block w-25">Card</div>
+    </div>
+</div>
 
 </body>
 </html>
