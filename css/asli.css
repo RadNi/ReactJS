@@ -6,3 +6,42 @@
     background-color: #ff69f0;
     background: linear-gradient(#8949c7, #f9729a);
 }
+
+
+html, body {
+    height: 100%;
+}
+/*.container-fluid {*/
+    /*margin: 0 auto;*/
+    /*height: 100%;*/
+    /*padding: 20px 0;*/
+
+    /*-moz-box-sizing: border-box;*/
+    /*-webkit-box-sizing: border-box;*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+.grid-images-section{
+    height: 500px;
+}
+
+.grid-images-images{
+    width:100%;
+    height: 70%;
+}
+
+.columns {
+    background-color: #C9E6FF;
+    height: 100%;
+}
+
+.content-area, .article-tree{
+    background: #bada55;
+    overflow:auto;
+    height: 100%;
+}
+
+.footer {
+    background: red;
+    height: 20px;
+}
