@@ -59,3 +59,40 @@ html, body {
     background: red;
     height: 20px;
 }
+
+
+
+.pandarian-text {
+    position: relative;
+}
+
+.pandarian-text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, orange, yellow, green, blue, purple);
+    mix-blend-mode: screen;
+    background-size: 0 0;
+
+}
+
+.tst{
+    background-image: -webkit-gradient(linear, left top, 45deg, color-stop(0%, #E605C1), color-stop(99%, #3B113B));
+    background-image: -moz-linear-gradient(45deg,#E605C1 0%,#3B113B 99%);
+    background-image: -webkit-linear-gradient(45deg,#E605C1 0%,#3B113B 99%);
+    background-image: -o-linear-gradient(45deg,#E605C1 0%,#3B113B 99%);
+    background-image: -ms-linear-gradient(45deg,#E605C1 0%,#3B113B 99%);
+    background-image: linear-gradient(45deg,#E605C1 0%,#3B113B 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position:relative;
+    display:inline-block; /*required*/
+
+    /*
+    online text gradient maker :
+    http://www.textgradient.com
+    */
+}
