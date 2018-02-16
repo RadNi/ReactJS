@@ -13,6 +13,20 @@
         body {
             position: relative;
         }
+        @media only screen and (max-width: 500px) {
+            #login{
+                display: none;
+            }
+            #section1{
+                padding-top: 2%;
+            }
+            body{
+                top: 20%;
+            }
+            nav{
+                height: 20%;
+            }
+        }
     </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -42,7 +56,7 @@
 
 <div id="section1" class="container-fluid section1-bg" style="opacity: 1">
     <div class="container-fluid" style="margin: 0 0 0 0 ;padding:0 0 0 0;height: 100%;width: 100%;">
-        <h1 style="font-family: 'Trebuchet MS'">Login</h1>
+        <h1 id="login" style="font-family: 'Trebuchet MS'">Login</h1>
         <div class="row" style="height: 75%;">
             <div class="col-sm-1" style="padding-right: 0%"></div>
             <div class="col-sm-7 text-center">
