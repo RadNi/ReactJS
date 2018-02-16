@@ -32,6 +32,23 @@ html, body {
     background-size: cover;
 }
 
+.section2-bg {
+    padding-top:70px;padding-bottom:70px;
+    background-image:url('../wall.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section3-bg {
+    padding-top:70px;padding-bottom:70px;
+    /*background-image:url('../wall.jpg');*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+
+    background: linear-gradient(0deg, #2d3237, #7d4913);
+
+}
+
 .credential{
     padding-left: 2%;
     padding-top: 2%;
@@ -105,4 +122,18 @@ html, body {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.my-card{
+    border-color:#fffd02;
+    height: 100%;
+}
+
+div> .my-card {
+    color: #fffd02;
+}
+
+.my-card:hover{
+    border-color:#a500a1;
+    color: #a500a1;
 }
