@@ -19,7 +19,7 @@ function addEntityToTable(tableElm, tdcol) {
         let tr = document.createElement('tr')
         let td = document.createElement('td')
         td.innerHTML = i
-        td.onclick = retonclick(i)
+        td.onclick = retonclick(tdcol[i])
         tr.appendChild(td)
 
         td = document.createElement('td')
@@ -29,11 +29,11 @@ function addEntityToTable(tableElm, tdcol) {
     }
 }
 
-function retonclick(key) {
+function retonclick(value) {
     return function (event) {
         let xml = new XMLHttpRequest()
 
-        xml.open('GET', 'https://api.github.com/user', true)
+        xml.open('GET', value, true)
         xml.setRequestHeader('Accept', 'application/vnd.github.v3+json')
         xml.setRequestHeader ("Authorization", "Basic " + btoa("RadNi" + ":" + "Amirhossein11"));
 
