@@ -19,7 +19,7 @@ function addEntityToTable(tableElm, tdcol) {
         let tr = document.createElement('tr')
         let td = document.createElement('td')
         td.innerHTML = i
-        td.onclick(retonclick(i))
+        td.onclick = retonclick(i)
         tr.appendChild(td)
 
         td = document.createElement('td')
@@ -30,18 +30,32 @@ function addEntityToTable(tableElm, tdcol) {
 }
 
 function retonclick(key) {
-    switch (key) {
-        case "current_user_url" :
-            return function (event) {
-                let xml = new XMLHttpRequest()
+    return function (event) {
+        let xml = new XMLHttpRequest()
 
-                xml.open('GET', 'https://api.github.com', true)
-                xml.setRequestHeader('Accept', 'application/vnd.github.v3+json')
-                xml.setRequestHeader ("Authorization", "Basic " + btoa("RadNi" + ":" + "Amirhossein11"));
+        xml.open('GET', 'https://api.github.com/user', true)
+        xml.setRequestHeader('Accept', 'application/vnd.github.v3+json')
+        xml.setRequestHeader ("Authorization", "Basic " + btoa("RadNi" + ":" + "Amirhossein11"));
 
-                xml.send()
+        xml.send()
 
+        Element.prototype.remove = function() {
+            this.parentElement.removeChild(this);
+        }
+
+
+        xml.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                let elm = document.getElementById("my-table")
+                console.log("ha?!")
+                while (elm.firstChild) {
+                    elm.removeChild(elm.firstChild);
+                }
+                addEntityToTable(document.getElementById('my-table'), JSON.parse(this.response))
+                // let el = document.createElement('p')
+                // el.innerHTML = JSON.parse(this.responseText)
+                // document.appendChild(el)
             }
-            break;
+        };
     }
 }
