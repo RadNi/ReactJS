@@ -35,7 +35,7 @@ function retonclick(value) {
 
         xml.open('GET', value, true)
         xml.setRequestHeader('Accept', 'application/vnd.github.v3+json')
-        xml.setRequestHeader ("Authorization", "Basic " + btoa("RadNi" + ":" + "Amirhossein11"));
+        xml.setRequestHeader ("Authorization", "Basic " + btoa("RadNi" + ":" + "my github password "));
 
         xml.send()
 
