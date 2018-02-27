@@ -1,6 +1,17 @@
 div.style1 {
     height: 10em;
-    position: relative;
-    align: center;
-
+    position: relative }
+div.style1 p {
+    margin: 0;
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+div.style2 button {
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
